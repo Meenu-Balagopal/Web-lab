@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>Web technology</title>
+</head>
+<body>
+<u><h1>INTRODUCTION TO WEB TECHNOLOGY</h1></u>
+<img src="file:///C:/Users/Meenu/Downloads/Web%20tech.jpg" width="1250" height="600">
+
+<ul><li><h4><p><a href="#client/server">Client/Server Model</a></p>
+<li><p><a href="#webapplication">Components of Web Application</a></p>
+<li><p><a href="#webcontent">Types of Web content</a></p>
+<li><p><a href="#overview">Overview of HTTP</a></p>
+<ol type="i"><li><a href="#Request">HTTP-Request</a></li>
+<li><a href="#Response">HTTP-Response</a></li></ol>
+<li><p><a href="#Dynamic">Generation of Dynamic Web pages</a></p>
+<li><p><a href="#Servers">Application Servers</a></p>
+<li><p><a href="#WebSecurity">Web Security</a></p></h4></li></ul>
+<pre>
+
+
+
+
+
+
+
+</pre>
+<a name="client/server"></a>
+<u><h2>Client/Server Model</h2></u>
+<img src="file:///C:/Users/Meenu/Downloads/Client-server-model.svg"> 
+<p align="justify">Client–server model is a distributed application structure that partitions tasks or workloads between the providers of a resource or service, called servers, and service requesters, called clients.Often clients and servers communicate over a computer network on separate hardware, but both client and server may reside in the same system. A server host runs one or more server programs, which share their resources with clients. A client does not share any of its resources, but it requests content or service from a server. Clients, therefore, initiate communication sessions with servers, which await incoming requests. Examples of computer applications that use the client-server model are email, network printing, and the World Wide Web.
+</p>
+
+<a name="webapplication"></a>
+<u><h2>Components of Web Application</h2></u>
+<img src="file:///C:/Users/Meenu/Downloads/Web-Applications-and-Components.webp" width="500" height="350">
+<p align="justify">Talking in terms of computing, a web application or a web app can be termed as a client–server computer program where the client, including the user interface and client-side logic, runs in a web browser. Some of the most common types of web applications are webmail, online retail sales, online banking, and online auctions among many others.
+One cannot clearly differentiate between a dynamic web page of any kind and a ‘web application’. Those websites which are referred to as “web applications” are the ones which have similar functionality to a desktop software application, or to a mobile app.
+</p>
+
+<a name="webcontent"></a>
+<u><h2>Types of Web Content</h2></u>
+<img src="file:///C:/Users/Meenu/Downloads/web-content-types.jpg" width="400" height="300">
+<p align="justify">
+Web content refers to the textual, aural, or visual content published on a website. Content means any creative element, for example, text, applications, images, archived e-mail messages, data, e-services, audio and video files, and so on.
+Web content is the key behind traffic generation to websites. Creating engaging content and organizing it into various categories for easy navigation is most important for a successful website. Also, it is important to optimize the web content for search engines so that it responds to the keywords used for searching.
+Web content is dominated by the "page" concept, its beginnings in an academic setting, and in a setting dominated by type-written pages, the idea of the web was to link directly from one academic paper to another academic paper. This was a completely revolutionary idea in the late 1980s and early 1990s when the best a link could be made was to cite a reference in a typewritten paper and name that reference either at the bottom of the page or on the last page of the academic paper.
+When it was possible for any person to write and own a Mosaic page, the concept of a "home page" blurred the idea of a page.It was possible for anyone to own a "Web page" or a "home page" which in many cases the website contained many physical pages in spite of being called "a page". People often cited their "home page" to provide credentials, links to anything that a person supported, or any other individual content a person wanted to publish.
+</p>
+
+<a name="overview"></a>
+<u><h2>Overview of HTTP</h2></u>
+<img src="file:///C:/Users/Meenu/Downloads/HTTP%20&%20layers.png" width="500" height="300"></pre>
+<p align="justify">HTTP is a protocol which allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more.Clients and servers communicate by exchanging individual messages (as opposed to a stream of data). The messages sent by the client, usually a Web browser, are called requests and the messages sent by the server as an answer are called responses.Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time. It is an application layer protocol that is sent over TCP, or over a TLS-encrypted TCP connection, though any reliable transport protocol could theoretically be used. Due to its extensibility, it is used to not only fetch hypertext documents, but also images and videos or to post content to servers, like with HTML form results. HTTP can also be used to fetch parts of documents to update Web pages on demand.
+</p>
+
+<a name="Request"></a>
+<u><h3>HTTP-Request</h3></u>
+<ul><li>HTTP defines a set of request methods to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as HTTP verbs. Each of them implements a different semantic, but some common features are shared by a group of them: e.g. a request method can be safe, idempotent, or cacheable.
+<img src="file:///C:/Users/Meenu/Downloads/http%20communication.png" width"250" height="300">
+
+<u><h4>GET</u></h4>
+<li>The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.</li>
+<h4><u>HEAD</u></h4>
+<li>The HEAD method asks for a response identical to that of a GET request, but without the response body.</li>
+<h4><u>POST</u></h4>
+<li>Another popular HTTP request method is POST. In web communication, POST requests are utilized to send data to a server to create or update a resource.  The information submitted to the server with POST request method is archived in the request body of the HTTP request. The HTTP POST method is often used to send user-generated data to a server. One example is when a user uploads a profile photo.</li>
+<h4><u>PUT</u></h4>
+<li>PUT is similar to POST as it is used to send data to the server to create or update a resource. The difference between the two is that PUT requests are idempotent. This means that if you call the same PUT requests multiple times, the results will always be the same.</li>
+<h4><u>DELETE</u></h4>
+<li>Just as it sounds, the DELETE request method is used to delete resources indicated by a specific URL. Making a DELETE request will remove the targeted resource.</li>
+<h4><u>PATCH</u></h4>
+<li>A PATCH request is similar to POST and PUT. However, its primary purpose is to apply partial modifications to the resource. And just like a POST request, the PATCH request is also non-idempotent. Additionally, unlike POST and PUT which require a full user entity, with PATCH requests, you may only send the updated username.</li>
+<h4><u>TRACE</u></h4>
+<li>TRACE requests are used to invoke a remote, application loop-back test along the path to the target resource. The TRACE method allows clients to view whatever message is being received at the other end of the request chain so that they can use the information for testing or diagnostic functions.</li>
+<h4><u>CONNECT</u></h4>
+<li>The CONNECT request method is used by the client to create a network connection to a web server over a particular HTTP. A good example is SSL tunneling. In a nutshell, CONNECT request establishes a tunnel to the server identified by a specific URL.</li>
+</ul>
+
+
+<a name="Response"></a>
+<h3><u>HTTP-Response</h3></u>
+<img src="file:///C:/Users/Meenu/Downloads/Response.png">
+<p align="justify">HTTP Response is the packet of information sent by Server to the Client in response to an earlier Request made by Client. HTTP Response contains the information requested by the Client.Just like HTTP Request, HTTP Response also has the same structure: Status Line.
+It has three sections: an initial status line, six header lines, and then the entity body. The entity body is the meat of the message – it contains the requested object itself. The status line has three fields: the protocol version field, a status code, and a corresponding status message. In this example, the status line indicates that the server is using HTTP and that that everything is OK
+The server uses the Connection: close header line to tell the client that it is going to close the TCP connection after sending the message. The Date: header line indicates the time and date when the HTTP response was created and sent by the server. Note that this is not the time when the object was created or last modified; it is the time when the server retrieves the object from its file system, inserts the object into the response message and sends the response message. The Server: header line indicates that the message was generated by an Apache Web server; it is analogous to the User-agent: header line in the HTTP request message. The Last-Modified: header line indicates the time and date when the object was created or last modified. The Last-Modified: header, which we cover in more detail below, is critical for object caching, both in the local client and in network cache (a.k.a. proxy) servers. The Content-Length: header line indicates the number of bytes in the object being sent. The Content-Type: header line indicates that the object in the entity body is HTML text.</p>
+<a name="Dynamic"></a>
+<h2><u>Generation of Dynamic Web pages</u></h2>
+<p>Web page is a document available on world wide web. Web Pages are stored on web server and can be viewed using a web browser.
+A web page can cotain huge information including text, graphics, audio, video and hyper links. These hyper links are the link to other web pages.
+Collection of linked web pages on a web server is known as website. There is unique Uniform Resource Locator (URL) is associated with each web page.
+</p>
+<h4><u>Dynamic Web Pages</u></h4>
+<img src="file:///C:/Users/Meenu/Downloads/internet-dynamic_web_page.jpg">
+<p>Server-side dynamic web page is created by using server-side scripting. There are server-side scripting parameters that determine how to assemble a new web page which also include setting up of more client-side processing.
+Client-side dynamic web page
+It is processed using client side scripting such as JavaScript. And then passed in to Document Object Model (DOM)."
+Dynamic web page shows different information at different point of time. It is possible to change a portaion of a web page without loading the entire web page. It has been made possible using Ajax technology.
+</p>
+
+
+<a name="Servers"></a>
+<h2><u>Application Servers</u></h2>
+<img src="file:///C:/Users/Meenu/Downloads/web-server-application-server.gif" width="500" height="350">
+<p align="justify">Application servers are system software upon which web applications or desktop applications[citation needed] run. Application servers consist of web server connectors,[clarification needed] computer programming languages, runtime libraries, database connectors, and the administration code needed to deploy, configure, manage, and connect these components on a web host. An application server runs behind[citation needed] a web Server (e.g. Apache or Microsoft Internet Information Services (IIS)) and (almost always) in front of an SQL[citation needed] database (e.g. PostgreSQL, MySQL, or Oracle). Web applications are computer code which run atop application servers and are written in the language(s) the application server supports and call the runtime libraries and components the application server offers.
+Many application servers exist. The choice impacts the cost, performance, reliability, scalability, and maintainability of a web application.
+Proprietary application servers provide system services in a well-defined but proprietary manner. The application developers develop programs according to the specification of the application server. Dependence on a particular vendor is the drawback of this approach.
+An opposite but analogous case is the Java EE platform. Java EE application servers provide system services in a well-defined, open, industry standard. 
+</p>
+
+<a name="WebSecurity"></a>
+<h2><u>Web Security</u></h2>
+<img src="file:///C:/Users/Meenu/Downloads/website-security.jpg" width="400" height="250">
+<p align="justify">Web security is also known as “Cybersecurity”. It basically means protecting a website or web application by detecting, preventing and responding to cyber threats.Websites and web applications are just as prone to security breaches as physical homes, stores, and government locations. Unfortunately, cybercrime happens every day, and great web security measures are needed to protect websites and web applications from becoming compromised.
+That’s exactly what web security does – it is a system of protection measures and protocols that can protect your website or web application from being hacked or entered by unauthorized personnel. This integral division of Information Security is vital to the protection of websites, web applications, and web services. Anything that is applied over the Internet should have some form of web security to protect it.
+</p>
+</body>
+</html>
