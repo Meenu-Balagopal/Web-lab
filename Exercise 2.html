@@ -7,14 +7,15 @@
 <img src="file:///C:/Users/Meenu/Downloads/Web%20tech.jpg" width="1250" height="600">
 
 <ul><li><h4><p><a href="#client/server">Client/Server Model</a></p>
-<li><p><a href="#webapplication">Components of Web Application</a></p>
-<li><p><a href="#webcontent">Types of Web content</a></p>
-<li><p><a href="#overview">Overview of HTTP</a></p>
-<ol type="i"><li><a href="#Request">HTTP-Request</a></li>
-<li><a href="#Response">HTTP-Response</a></li></ol>
-<li><p><a href="#Dynamic">Generation of Dynamic Web pages</a></p>
-<li><p><a href="#Servers"</a>Application Servers</p>
-<li><p><a href="#WebSecurity"</a>Web Security</p></h4></li></ul>
+ <li><p><a href="#webapplication">Components of Web Application</a></p>
+ <li><p><a href="#webcontent">Types of Web content</a></p>
+ <li><p><a href="#overview">Overview of HTTP</a></p>
+  <ol type="i"><li><a href="#Request">HTTP-Request</a></li>
+    <li><a href="#Response">HTTP-Response</li></a></ol>
+ <li><p><a href="#Dynamic">Generation of Dynamic Web pages</a></p>
+ <li><p><a href="#Servers">Application Servers</a>/p>
+ <li><p><a href="#WebSecurity">Web Security</a></p></h4></li>
+</ul>
 <pre>
 
 
@@ -50,7 +51,7 @@ When it was possible for any person to write and own a Mosaic page, the concept 
 <a name="overview"></a>
 <u><h2>Overview of HTTP</h2></u>
 <img src="file:///C:/Users/Meenu/Downloads/HTTP%20&%20layers.png" width="500" height="300"></pre>
-<p>HTTP is a protocol which allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more.Clients and servers communicate by exchanging individual messages (as opposed to a stream of data). The messages sent by the client, usually a Web browser, are called requests and the messages sent by the server as an answer are called responses.Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time. It is an application layer protocol that is sent over TCP, or over a TLS-encrypted TCP connection, though any reliable transport protocol could theoretically be used. Due to its extensibility, it is used to not only fetch hypertext documents, but also images and videos or to post content to servers, like with HTML form results. HTTP can also be used to fetch parts of documents to update Web pages on demand.
+<p align="justify">HTTP is a protocol which allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more.Clients and servers communicate by exchanging individual messages (as opposed to a stream of data). The messages sent by the client, usually a Web browser, are called requests and the messages sent by the server as an answer are called responses.Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time. It is an application layer protocol that is sent over TCP, or over a TLS-encrypted TCP connection, though any reliable transport protocol could theoretically be used. Due to its extensibility, it is used to not only fetch hypertext documents, but also images and videos or to post content to servers, like with HTML form results. HTTP can also be used to fetch parts of documents to update Web pages on demand.
 </p>
 
 <a name="Request"></a>
@@ -80,7 +81,7 @@ When it was possible for any person to write and own a Mosaic page, the concept 
 <a name="Response"></a>
 <h3><u>HTTP-Response</h3></u>
 <img src="file:///C:/Users/Meenu/Downloads/Response.png">
-<p>HTTP Response is the packet of information sent by Server to the Client in response to an earlier Request made by Client. HTTP Response contains the information requested by the Client.Just like HTTP Request, HTTP Response also has the same structure: Status Line.
+<p align="justify">HTTP Response is the packet of information sent by Server to the Client in response to an earlier Request made by Client. HTTP Response contains the information requested by the Client.Just like HTTP Request, HTTP Response also has the same structure: Status Line.
 It has three sections: an initial status line, six header lines, and then the entity body. The entity body is the meat of the message – it contains the requested object itself. The status line has three fields: the protocol version field, a status code, and a corresponding status message. In this example, the status line indicates that the server is using HTTP and that that everything is OK
 The server uses the Connection: close header line to tell the client that it is going to close the TCP connection after sending the message. The Date: header line indicates the time and date when the HTTP response was created and sent by the server. Note that this is not the time when the object was created or last modified; it is the time when the server retrieves the object from its file system, inserts the object into the response message and sends the response message. The Server: header line indicates that the message was generated by an Apache Web server; it is analogous to the User-agent: header line in the HTTP request message. The Last-Modified: header line indicates the time and date when the object was created or last modified. The Last-Modified: header, which we cover in more detail below, is critical for object caching, both in the local client and in network cache (a.k.a. proxy) servers. The Content-Length: header line indicates the number of bytes in the object being sent. The Content-Type: header line indicates that the object in the entity body is HTML text.</p>
 <a name="Dynamic"></a>
