@@ -1,0 +1,118 @@
+<html>
+<head>
+  <title>Exercise 7</title>
+  <style media="screen">
+  #btn
+  {
+    font-size:20px;
+    background-color:#8B3F4F;
+    color:white;
+  }
+  #p1
+  {
+    border-style:solid;
+    margin-left:35%;
+    margin-right:30%;
+    background-color:#F5B7B1;
+  }
+  #p2
+  {
+    font-size:35px;
+    color:#00004d;
+  }
+  #p3
+  {
+    margin-left:-6%;
+    margin-right:-9%;
+    background-color:#ffffb3;
+  }
+  td
+  {
+    padding:2px;
+    spacing:4px;
+  }
+  select
+  {
+    width: 150px;
+    height: 30px;
+  }
+  .mm
+  {
+    font-size:24px;
+    height:15px;
+    color:Red;
+  }
+  </style>
+</head>
+<body align="center">
+  <br>
+  <h1><u>GENERATE CALENDAR</u></h1>
+  <br>
+  <p id="p1">
+    <br><br>
+    <font class="pp" size="5">Select Year :
+      <select id="year">
+        <script type="text/javascript">
+        var year=[];
+        var i,len;
+        for(i=1946; i<=2050; i++)
+        {
+          year.push(i);
+        }
+        len=year.length;
+        for(i=0; i<len; i++)
+        {
+          document.write("<option value='" + year[i] + "'>" + year[i] + "</option>")
+        }
+        </script>
+      </select>
+      <br><br><br>
+      <button type="button" name="cal" id="btn" onClick="cal()">SHOW CALENDAR</button>
+      &nbsp; &nbsp;&nbsp;
+      <input type="reset" name="reset" id="btn" value="RESET" onclick="location.reload();">
+      <br><br>
+    </p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script type="text/javascript">
+    function cal()
+    {
+      var i,j,mm,yy,dd,a;
+      var d="<table align='center'><tr  class='mm'><br><th>JANUARY</th><th>FEBRUARY</th><th>MARCH</th><th>APRIL</th><th>MAY</th></tr><tr>";
+      for(i=0; i<12; i++)
+      {
+        d+="<td><table border='1' style='float:left; margin-left: 25%; border-collapse:collapse;'><tr><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th></tr><tr>";
+        mm=i;
+        yy=document.getElementById('year').value;
+        document.getElementById("p2").innerHTML="<b><u>CALENDAR   "+yy+"</u></b>";
+        a=new Date(yy,mm,1);
+        dd=a.getDay();
+        for(j=0; j<dd; j++)
+        {
+          d+="<td></td>";
+        }
+        while(a.getMonth()==mm)
+        {
+          d+="<td>"+ a.getDate()+ "</td>";
+          if(a.getDay()%7==6)
+          {
+            d+="</tr><tr>";
+          }
+          a.setDate(a.getDate()+1);
+        }
+        d+="</tr></table></td>";
+        if(mm==4)
+        {
+          d+="</tr><tr class='mm'><th>JUNE</th><th>JULY</th><th>AUGUST</th><th>SEPTEMBER</th><th>OCTOBER</th></tr><tr>";
+        }
+        else if(mm == 9)
+        {
+          d+="</tr><tr class='mm'><th>NOVEMBER</th><th>DECEMBER</th></tr><tr>";
+        }
+      }
+      d+="</tr></table>";
+      document.getElementById('p3').innerHTML = d;
+    }
+    </script>
+  </body>
+  </html>
