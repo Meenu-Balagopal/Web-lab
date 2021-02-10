@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Exercise-10</title>
+</head>
+<body>
+<div>
+<center id="center">
+    <img src="file:///C:/Users/Meenu/Downloads/Web%20tech.jpg" id="img" height="50%"><br><br>
+    <h1 id="text1" style="color:blue";>Bring the Mouse here!</h1>
+    <h1 id="text2" style="color:red";>Move the Mouse from here!</h1>
+</center>
+<script>
+document.getElementById("center").addEventListener("mouseover",on);
+document.getElementById("center").addEventListener("mouseout",out);
+function on()
+{
+document.getElementById("img").src="file:///C:/Users/Meenu/Downloads/Response.png";
+document.getElementById("text1").style.display="none";
+document.getElementById("text2").style.display="block";
+document.body.style.background="lightblue";
+}
+function out()
+{
+document.getElementById("img").src="file:///C:/Users/Meenu/Downloads/Web%20tech.jpg";
+document.getElementById("text1").style.display="block";
+document.getElementById("text2").style.display="none";
+document.body.style.background="lightyellow";
+}
+</script>
+</div>
+</body>
+</html>
